@@ -1,0 +1,247 @@
+2025-03-21 20:39:01,686 [trainer.py] => config: ./exps/fetril.json
+2025-03-21 20:39:01,686 [trainer.py] => prefix: train
+2025-03-21 20:39:01,686 [trainer.py] => dataset: cifar100
+2025-03-21 20:39:01,686 [trainer.py] => memory_size: 0
+2025-03-21 20:39:01,687 [trainer.py] => shuffle: True
+2025-03-21 20:39:01,687 [trainer.py] => init_cls: 40
+2025-03-21 20:39:01,687 [trainer.py] => increment: 1
+2025-03-21 20:39:01,687 [trainer.py] => model_name: fetril
+2025-03-21 20:39:01,687 [trainer.py] => convnet_type: resnet32
+2025-03-21 20:39:01,687 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-03-21 20:39:01,687 [trainer.py] => seed: 1993
+2025-03-21 20:39:01,687 [trainer.py] => init_epochs: 200
+2025-03-21 20:39:01,687 [trainer.py] => init_lr: 0.1
+2025-03-21 20:39:01,687 [trainer.py] => init_weight_decay: 0.0005
+2025-03-21 20:39:01,687 [trainer.py] => epochs: 50
+2025-03-21 20:39:01,687 [trainer.py] => lr: 0.05
+2025-03-21 20:39:01,687 [trainer.py] => batch_size: 128
+2025-03-21 20:39:01,687 [trainer.py] => weight_decay: 0.0005
+2025-03-21 20:39:01,687 [trainer.py] => num_workers: 8
+2025-03-21 20:39:01,687 [trainer.py] => T: 2
+2025-03-21 20:40:31,134 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2025-03-21 20:40:36,441 [trainer.py] => All params: 464154
+2025-03-21 20:40:36,441 [trainer.py] => Trainable params: 464154
+2025-03-21 20:40:36,452 [fetril.py] => Learning on 0-40
+2025-03-21 20:40:36,453 [fetril.py] => All params: 466754
+2025-03-21 20:40:36,453 [fetril.py] => Trainable params: 466754
+2025-03-21 20:54:16,805 [trainer.py] => config: ./exps/fetril.json
+2025-03-21 20:54:16,805 [trainer.py] => prefix: train
+2025-03-21 20:54:16,806 [trainer.py] => dataset: cifar100
+2025-03-21 20:54:16,806 [trainer.py] => memory_size: 0
+2025-03-21 20:54:16,806 [trainer.py] => shuffle: True
+2025-03-21 20:54:16,806 [trainer.py] => init_cls: 40
+2025-03-21 20:54:16,806 [trainer.py] => increment: 1
+2025-03-21 20:54:16,806 [trainer.py] => model_name: fetril
+2025-03-21 20:54:16,806 [trainer.py] => convnet_type: resnet32
+2025-03-21 20:54:16,806 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-03-21 20:54:16,806 [trainer.py] => seed: 1993
+2025-03-21 20:54:16,806 [trainer.py] => init_epochs: 1
+2025-03-21 20:54:16,806 [trainer.py] => actual_epochs: 200
+2025-03-21 20:54:16,806 [trainer.py] => init_lr: 0.1
+2025-03-21 20:54:16,806 [trainer.py] => init_weight_decay: 0.0005
+2025-03-21 20:54:16,806 [trainer.py] => epochs: 1
+2025-03-21 20:54:16,806 [trainer.py] => actual: 50
+2025-03-21 20:54:16,806 [trainer.py] => lr: 0.05
+2025-03-21 20:54:16,806 [trainer.py] => batch_size: 128
+2025-03-21 20:54:16,806 [trainer.py] => weight_decay: 0.0005
+2025-03-21 20:54:16,807 [trainer.py] => num_workers: 8
+2025-03-21 20:54:16,807 [trainer.py] => T: 2
+2025-03-21 20:54:18,920 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2025-03-21 20:54:20,183 [trainer.py] => All params: 464154
+2025-03-21 20:54:20,184 [trainer.py] => Trainable params: 464154
+2025-03-21 20:55:38,632 [trainer.py] => config: ./exps/fetril.json
+2025-03-21 20:55:38,632 [trainer.py] => prefix: train
+2025-03-21 20:55:38,632 [trainer.py] => dataset: cifar100
+2025-03-21 20:55:38,633 [trainer.py] => memory_size: 0
+2025-03-21 20:55:38,633 [trainer.py] => shuffle: True
+2025-03-21 20:55:38,633 [trainer.py] => init_cls: 40
+2025-03-21 20:55:38,633 [trainer.py] => increment: 1
+2025-03-21 20:55:38,633 [trainer.py] => model_name: fetril
+2025-03-21 20:55:38,633 [trainer.py] => convnet_type: resnet32
+2025-03-21 20:55:38,633 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-03-21 20:55:38,633 [trainer.py] => seed: 1993
+2025-03-21 20:55:38,633 [trainer.py] => init_epochs: 1
+2025-03-21 20:55:38,633 [trainer.py] => actual_epochs: 200
+2025-03-21 20:55:38,633 [trainer.py] => init_lr: 0.1
+2025-03-21 20:55:38,633 [trainer.py] => init_weight_decay: 0.0005
+2025-03-21 20:55:38,633 [trainer.py] => epochs: 1
+2025-03-21 20:55:38,633 [trainer.py] => actual: 50
+2025-03-21 20:55:38,633 [trainer.py] => lr: 0.05
+2025-03-21 20:55:38,633 [trainer.py] => batch_size: 128
+2025-03-21 20:55:38,633 [trainer.py] => weight_decay: 0.0005
+2025-03-21 20:55:38,633 [trainer.py] => num_workers: 8
+2025-03-21 20:55:38,633 [trainer.py] => T: 2
+2025-03-21 20:55:40,675 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2025-03-21 20:55:41,976 [trainer.py] => All params: 464154
+2025-03-21 20:55:41,976 [trainer.py] => Trainable params: 464154
+2025-03-21 20:55:41,983 [fetril.py] => Learning on 0-40
+2025-03-21 20:55:41,983 [fetril.py] => All params: 466754
+2025-03-21 20:55:41,984 [fetril.py] => Trainable params: 466754
+2025-03-21 20:55:45,942 [fetril.py] => Task 0, Epoch 1/1 => Loss 3.656, Train_accy 5.32, Test_accy 9.82
+2025-03-21 20:56:20,373 [fetril.py] => svm train: acc: 23.56
+2025-03-21 20:56:20,376 [fetril.py] => svm evaluation: acc_list: [21.72]
+2025-03-21 20:56:20,834 [trainer.py] => No NME accuracy.
+2025-03-21 20:56:20,835 [trainer.py] => CNN: {'total': 9.82, '00-09': 10.1, '10-19': 11.8, '20-29': 10.4, '30-39': 7.0, 'old': 0, 'new': 9.82}
+2025-03-21 20:56:20,835 [trainer.py] => CNN top1 curve: [9.82]
+2025-03-21 20:56:20,835 [trainer.py] => CNN top5 curve: [37.22]
+
+2025-03-21 20:56:20,835 [trainer.py] => Average Accuracy (CNN): 9.82
+2025-03-21 20:56:20,836 [trainer.py] => All params: 466754
+2025-03-21 20:56:20,836 [trainer.py] => Trainable params: 466754
+2025-03-21 20:56:20,843 [fetril.py] => Learning on 40-41
+2025-03-21 20:56:20,844 [fetril.py] => All params: 466819
+2025-03-21 20:56:20,844 [fetril.py] => Trainable params: 2665
+2025-03-21 20:56:29,417 [fetril.py] => Task 1, Epoch 1/1 => Loss 2.980, Train_accy 17.94, Test_accy 13.98
+2025-03-21 20:56:40,803 [fetril.py] => svm train: acc: 51.54
+2025-03-21 20:56:40,812 [fetril.py] => svm evaluation: acc_list: [21.72, 18.93]
+2025-03-21 20:56:41,215 [trainer.py] => No NME accuracy.
+2025-03-21 20:56:41,215 [trainer.py] => CNN: {'total': 13.98, '00-09': 14.7, '10-19': 13.6, '20-29': 22.1, '30-39': 6.5, 'old': 14.22, 'new': 4.0}
+2025-03-21 20:56:41,215 [trainer.py] => CNN top1 curve: [9.82, 13.98]
+2025-03-21 20:56:41,215 [trainer.py] => CNN top5 curve: [37.22, 45.98]
+
+2025-03-21 20:56:41,215 [trainer.py] => Average Accuracy (CNN): 11.9
+2025-03-21 20:56:41,216 [trainer.py] => All params: 466819
+2025-03-21 20:56:41,216 [trainer.py] => Trainable params: 2665
+2025-03-21 20:56:41,223 [fetril.py] => Learning on 41-42
+2025-03-21 20:56:41,223 [fetril.py] => All params: 466884
+2025-03-21 20:56:41,224 [fetril.py] => Trainable params: 2730
+2025-03-21 20:56:48,019 [fetril.py] => Task 2, Epoch 1/1 => Loss 2.786, Train_accy 24.30, Test_accy 14.69
+2025-03-21 20:56:58,751 [fetril.py] => svm train: acc: 60.0
+2025-03-21 20:56:58,760 [fetril.py] => svm evaluation: acc_list: [21.72, 18.93, 18.0]
+2025-03-21 20:56:59,187 [trainer.py] => No NME accuracy.
+2025-03-21 20:56:59,187 [trainer.py] => CNN: {'total': 14.69, '00-09': 12.7, '10-19': 13.0, '20-29': 18.6, '30-39': 11.6, '40-49': 29.0, 'old': 13.83, 'new': 50.0}
+2025-03-21 20:56:59,187 [trainer.py] => CNN top1 curve: [9.82, 13.98, 14.69]
+2025-03-21 20:56:59,187 [trainer.py] => CNN top5 curve: [37.22, 45.98, 44.98]
+
+2025-03-21 20:56:59,188 [trainer.py] => Average Accuracy (CNN): 12.83
+2025-03-21 20:56:59,188 [trainer.py] => All params: 466884
+2025-03-21 20:56:59,188 [trainer.py] => Trainable params: 2730
+2025-03-21 20:56:59,195 [fetril.py] => Learning on 42-43
+2025-03-21 20:56:59,196 [fetril.py] => All params: 466949
+2025-03-21 20:56:59,196 [fetril.py] => Trainable params: 2795
+2025-03-21 20:57:06,156 [fetril.py] => Task 3, Epoch 1/1 => Loss 2.897, Train_accy 20.44, Test_accy 15.65
+2025-03-21 20:57:19,799 [fetril.py] => svm train: acc: 53.37
+2025-03-21 20:57:19,808 [fetril.py] => svm evaluation: acc_list: [21.72, 18.93, 18.0, 18.51]
+2025-03-21 20:57:20,251 [trainer.py] => No NME accuracy.
+2025-03-21 20:57:20,252 [trainer.py] => CNN: {'total': 15.65, '00-09': 17.1, '10-19': 14.2, '20-29': 20.3, '30-39': 10.4, '40-49': 17.67, 'old': 16.02, 'new': 0.0}
+2025-03-21 20:57:20,252 [trainer.py] => CNN top1 curve: [9.82, 13.98, 14.69, 15.65]
+2025-03-21 20:57:20,252 [trainer.py] => CNN top5 curve: [37.22, 45.98, 44.98, 45.77]
+
+2025-03-21 20:57:20,252 [trainer.py] => Average Accuracy (CNN): 13.535
+2025-03-21 20:57:20,252 [trainer.py] => All params: 466949
+2025-03-21 20:57:20,253 [trainer.py] => Trainable params: 2795
+2025-03-21 20:57:20,259 [fetril.py] => Learning on 43-44
+2025-03-21 20:57:20,260 [fetril.py] => All params: 467014
+2025-03-21 20:57:20,261 [fetril.py] => Trainable params: 2860
+2025-03-21 20:57:27,381 [fetril.py] => Task 4, Epoch 1/1 => Loss 2.919, Train_accy 23.30, Test_accy 15.27
+2025-03-21 20:57:41,530 [fetril.py] => svm train: acc: 66.32
+2025-03-21 20:57:41,534 [fetril.py] => svm evaluation: acc_list: [21.72, 18.93, 18.0, 18.51, 18.2]
+2025-03-21 20:57:42,043 [trainer.py] => No NME accuracy.
+2025-03-21 20:57:42,043 [trainer.py] => CNN: {'total': 15.27, '00-09': 14.5, '10-19': 12.4, '20-29': 22.2, '30-39': 9.5, '40-49': 21.5, 'old': 15.0, 'new': 27.0}
+2025-03-21 20:57:42,043 [trainer.py] => CNN top1 curve: [9.82, 13.98, 14.69, 15.65, 15.27]
+2025-03-21 20:57:42,043 [trainer.py] => CNN top5 curve: [37.22, 45.98, 44.98, 45.77, 45.45]
+
+2025-03-21 20:57:42,043 [trainer.py] => Average Accuracy (CNN): 13.882
+2025-03-21 20:57:42,044 [trainer.py] => All params: 467014
+2025-03-21 20:57:42,044 [trainer.py] => Trainable params: 2860
+2025-03-21 20:57:42,051 [fetril.py] => Learning on 44-45
+2025-03-21 20:57:42,051 [fetril.py] => All params: 467079
+2025-03-21 20:57:42,052 [fetril.py] => Trainable params: 2925
+2025-03-21 20:57:49,469 [fetril.py] => Task 5, Epoch 1/1 => Loss 2.936, Train_accy 25.15, Test_accy 15.49
+2025-03-21 20:58:02,551 [fetril.py] => svm train: acc: 61.93
+2025-03-21 20:58:02,564 [fetril.py] => svm evaluation: acc_list: [21.72, 18.93, 18.0, 18.51, 18.2, 18.49]
+2025-03-21 20:58:03,057 [trainer.py] => No NME accuracy.
+2025-03-21 20:58:03,057 [trainer.py] => CNN: {'total': 15.49, '00-09': 19.8, '10-19': 10.8, '20-29': 21.6, '30-39': 8.9, '40-49': 17.2, 'old': 15.82, 'new': 1.0}
+2025-03-21 20:58:03,057 [trainer.py] => CNN top1 curve: [9.82, 13.98, 14.69, 15.65, 15.27, 15.49]
+2025-03-21 20:58:03,057 [trainer.py] => CNN top5 curve: [37.22, 45.98, 44.98, 45.77, 45.45, 46.07]
+
+2025-03-21 20:58:03,057 [trainer.py] => Average Accuracy (CNN): 14.149999999999999
+2025-03-21 20:58:03,058 [trainer.py] => All params: 467079
+2025-03-21 20:58:03,058 [trainer.py] => Trainable params: 2925
+2025-03-21 20:58:03,065 [fetril.py] => Learning on 45-46
+2025-03-21 20:58:03,066 [fetril.py] => All params: 467144
+2025-03-21 20:58:03,066 [fetril.py] => Trainable params: 2990
+2025-03-21 20:58:10,680 [fetril.py] => Task 6, Epoch 1/1 => Loss 2.610, Train_accy 33.02, Test_accy 15.11
+2025-03-21 20:58:22,533 [fetril.py] => svm train: acc: 73.38
+2025-03-21 20:58:22,536 [fetril.py] => svm evaluation: acc_list: [21.72, 18.93, 18.0, 18.51, 18.2, 18.49, 18.02]
+2025-03-21 20:58:23,002 [trainer.py] => No NME accuracy.
+2025-03-21 20:58:23,002 [trainer.py] => CNN: {'total': 15.11, '00-09': 16.9, '10-19': 14.8, '20-29': 19.9, '30-39': 10.6, '40-49': 12.17, 'old': 15.44, 'new': 0.0}
+2025-03-21 20:58:23,002 [trainer.py] => CNN top1 curve: [9.82, 13.98, 14.69, 15.65, 15.27, 15.49, 15.11]
+2025-03-21 20:58:23,002 [trainer.py] => CNN top5 curve: [37.22, 45.98, 44.98, 45.77, 45.45, 46.07, 44.96]
+
+2025-03-21 20:58:23,002 [trainer.py] => Average Accuracy (CNN): 14.287142857142856
+2025-03-21 20:58:23,003 [trainer.py] => All params: 467144
+2025-03-21 20:58:23,003 [trainer.py] => Trainable params: 2990
+2025-03-21 20:58:23,009 [fetril.py] => Learning on 46-47
+2025-03-21 20:58:23,010 [fetril.py] => All params: 467209
+2025-03-21 20:58:23,011 [fetril.py] => Trainable params: 3055
+2025-03-21 20:58:30,708 [fetril.py] => Task 7, Epoch 1/1 => Loss 2.959, Train_accy 22.47, Test_accy 15.15
+2025-03-21 21:39:27,596 [trainer.py] => config: ./exps/fetril.json
+2025-03-21 21:39:27,596 [trainer.py] => prefix: train
+2025-03-21 21:39:27,596 [trainer.py] => dataset: cifar100
+2025-03-21 21:39:27,596 [trainer.py] => memory_size: 0
+2025-03-21 21:39:27,596 [trainer.py] => shuffle: True
+2025-03-21 21:39:27,596 [trainer.py] => init_cls: 40
+2025-03-21 21:39:27,596 [trainer.py] => increment: 1
+2025-03-21 21:39:27,596 [trainer.py] => model_name: fetril
+2025-03-21 21:39:27,596 [trainer.py] => convnet_type: resnet32
+2025-03-21 21:39:27,596 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-03-21 21:39:27,596 [trainer.py] => seed: 1993
+2025-03-21 21:39:27,596 [trainer.py] => init_epochs: 200
+2025-03-21 21:39:27,596 [trainer.py] => actual_epochs: 200
+2025-03-21 21:39:27,596 [trainer.py] => init_lr: 0.1
+2025-03-21 21:39:27,596 [trainer.py] => init_weight_decay: 0.0005
+2025-03-21 21:39:27,596 [trainer.py] => epochs: 50
+2025-03-21 21:39:27,596 [trainer.py] => actual: 50
+2025-03-21 21:39:27,597 [trainer.py] => lr: 0.05
+2025-03-21 21:39:27,597 [trainer.py] => batch_size: 128
+2025-03-21 21:39:27,597 [trainer.py] => weight_decay: 0.0005
+2025-03-21 21:39:27,597 [trainer.py] => num_workers: 8
+2025-03-21 21:39:27,597 [trainer.py] => T: 2
+2025-03-21 21:39:29,676 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2025-03-21 21:39:30,786 [trainer.py] => All params: 464154
+2025-03-21 21:39:30,787 [trainer.py] => Trainable params: 464154
+2025-03-21 21:39:30,792 [fetril.py] => Learning on 0-40
+2025-03-21 21:39:30,793 [fetril.py] => All params: 466754
+2025-03-21 21:39:30,793 [fetril.py] => Trainable params: 466754
+2025-03-21 21:40:02,513 [trainer.py] => config: ./exps/fetril.json
+2025-03-21 21:40:02,513 [trainer.py] => prefix: train
+2025-03-21 21:40:02,513 [trainer.py] => dataset: cifar100
+2025-03-21 21:40:02,513 [trainer.py] => memory_size: 0
+2025-03-21 21:40:02,513 [trainer.py] => shuffle: True
+2025-03-21 21:40:02,513 [trainer.py] => init_cls: 40
+2025-03-21 21:40:02,513 [trainer.py] => increment: 1
+2025-03-21 21:40:02,513 [trainer.py] => model_name: fetril
+2025-03-21 21:40:02,513 [trainer.py] => convnet_type: resnet32
+2025-03-21 21:40:02,513 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-03-21 21:40:02,513 [trainer.py] => seed: 1993
+2025-03-21 21:40:02,514 [trainer.py] => init_epochs: 200
+2025-03-21 21:40:02,514 [trainer.py] => actual_epochs: 200
+2025-03-21 21:40:02,514 [trainer.py] => init_lr: 0.1
+2025-03-21 21:40:02,514 [trainer.py] => init_weight_decay: 0.0005
+2025-03-21 21:40:02,514 [trainer.py] => epochs: 50
+2025-03-21 21:40:02,514 [trainer.py] => actual: 50
+2025-03-21 21:40:02,514 [trainer.py] => lr: 0.05
+2025-03-21 21:40:02,514 [trainer.py] => batch_size: 128
+2025-03-21 21:40:02,514 [trainer.py] => weight_decay: 0.0005
+2025-03-21 21:40:02,514 [trainer.py] => num_workers: 8
+2025-03-21 21:40:02,514 [trainer.py] => T: 2
+2025-03-21 21:40:04,511 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2025-03-21 21:40:05,621 [trainer.py] => All params: 464154
+2025-03-21 21:40:05,622 [trainer.py] => Trainable params: 464154
+2025-03-21 21:40:05,627 [fetril.py] => Learning on 0-40
+2025-03-21 21:40:05,627 [fetril.py] => All params: 466754
+2025-03-21 21:40:05,628 [fetril.py] => Trainable params: 466754
+2025-03-21 21:40:13,298 [fetril.py] => Task 0, Epoch 1/200 => Loss 3.685, Train_accy 5.28, Test_accy 11.05
+2025-03-21 21:40:19,027 [fetril.py] => Task 0, Epoch 2/200 => Loss 3.404, Train_accy 9.96
+2025-03-21 21:40:24,747 [fetril.py] => Task 0, Epoch 3/200 => Loss 3.295, Train_accy 12.32
+2025-03-21 21:40:30,492 [fetril.py] => Task 0, Epoch 4/200 => Loss 3.200, Train_accy 15.13
+2025-03-21 21:40:36,229 [fetril.py] => Task 0, Epoch 5/200 => Loss 3.100, Train_accy 17.13
+2025-03-21 21:40:42,429 [fetril.py] => Task 0, Epoch 6/200 => Loss 3.028, Train_accy 19.03, Test_accy 28.98
+2025-03-21 21:40:48,148 [fetril.py] => Task 0, Epoch 7/200 => Loss 2.931, Train_accy 21.22
+2025-03-21 21:40:53,875 [fetril.py] => Task 0, Epoch 8/200 => Loss 2.849, Train_accy 22.98
+2025-03-21 21:40:59,579 [fetril.py] => Task 0, Epoch 9/200 => Loss 2.752, Train_accy 25.58
+2025-03-21 21:41:05,324 [fetril.py] => Task 0, Epoch 10/200 => Loss 2.667, Train_accy 27.66
+2025-03-21 21:41:11,519 [fetril.py] => Task 0, Epoch 11/200 => Loss 2.589, Train_accy 29.98, Test_accy 36.72
+2025-03-21 21:41:17,240 [fetril.py] => Task 0, Epoch 12/200 => Loss 2.512, Train_accy 32.16
+2025-03-21 21:41:22,979 [fetril.py] => Task 0, Epoch 13/200 => Loss 2.474, Train_accy 33.36

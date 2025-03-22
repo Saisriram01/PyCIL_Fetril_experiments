@@ -1,0 +1,1255 @@
+2025-03-21 21:42:38,172 [trainer.py] => config: ./exps/fetril.json
+2025-03-21 21:42:38,172 [trainer.py] => prefix: train
+2025-03-21 21:42:38,172 [trainer.py] => dataset: cifar100
+2025-03-21 21:42:38,173 [trainer.py] => memory_size: 0
+2025-03-21 21:42:38,173 [trainer.py] => shuffle: True
+2025-03-21 21:42:38,173 [trainer.py] => init_cls: 50
+2025-03-21 21:42:38,173 [trainer.py] => increment: 10
+2025-03-21 21:42:38,173 [trainer.py] => model_name: fetril
+2025-03-21 21:42:38,173 [trainer.py] => convnet_type: resnet32
+2025-03-21 21:42:38,173 [trainer.py] => device: [device(type='cuda', index=0)]
+2025-03-21 21:42:38,173 [trainer.py] => seed: 1993
+2025-03-21 21:42:38,173 [trainer.py] => init_epochs: 200
+2025-03-21 21:42:38,173 [trainer.py] => actual_epochs: 200
+2025-03-21 21:42:38,173 [trainer.py] => init_lr: 0.1
+2025-03-21 21:42:38,173 [trainer.py] => init_weight_decay: 0.0005
+2025-03-21 21:42:38,173 [trainer.py] => epochs: 50
+2025-03-21 21:42:38,173 [trainer.py] => actual: 50
+2025-03-21 21:42:38,173 [trainer.py] => lr: 0.05
+2025-03-21 21:42:38,173 [trainer.py] => batch_size: 128
+2025-03-21 21:42:38,173 [trainer.py] => weight_decay: 0.0005
+2025-03-21 21:42:38,173 [trainer.py] => num_workers: 8
+2025-03-21 21:42:38,173 [trainer.py] => T: 2
+Files already downloaded and verified
+Files already downloaded and verified
+2025-03-21 21:42:40,164 [data_manager.py] => [68, 56, 78, 8, 23, 84, 90, 65, 74, 76, 40, 89, 3, 92, 55, 9, 26, 80, 43, 38, 58, 70, 77, 1, 85, 19, 17, 50, 28, 53, 13, 81, 45, 82, 6, 59, 83, 16, 15, 44, 91, 41, 72, 60, 79, 52, 20, 10, 31, 54, 37, 95, 14, 71, 96, 98, 97, 2, 64, 66, 42, 22, 35, 86, 24, 34, 87, 21, 99, 0, 88, 27, 18, 94, 11, 12, 47, 25, 30, 46, 62, 69, 36, 61, 7, 63, 75, 5, 32, 4, 51, 48, 73, 93, 39, 67, 29, 49, 57, 33]
+2025-03-21 21:42:41,289 [trainer.py] => All params: 464154
+2025-03-21 21:42:41,290 [trainer.py] => Trainable params: 464154
+Training the model - Task 0
+Calling incremental_train
+2025-03-21 21:42:41,295 [fetril.py] => Learning on 0-50
+2025-03-21 21:42:41,296 [fetril.py] => All params: 467404
+2025-03-21 21:42:41,296 [fetril.py] => Trainable params: 467404
+network in the _train function IncrementalNet(
+  (convnet): CifarResNet(
+    (conv_1_3x3): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (stage_1): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_2): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_3): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    (fc): Linear(in_features=64, out_features=10, bias=True)
+  )
+  (fc): SimpleLinear()
+)
+2025-03-21 21:42:50,276 [fetril.py] => Task 0, Epoch 1/200 => Loss 3.875, Train_accy 4.42, Test_accy 5.90
+2025-03-21 21:42:57,347 [fetril.py] => Task 0, Epoch 2/200 => Loss 3.649, Train_accy 7.64
+2025-03-21 21:43:04,389 [fetril.py] => Task 0, Epoch 3/200 => Loss 3.518, Train_accy 10.73
+2025-03-21 21:43:11,494 [fetril.py] => Task 0, Epoch 4/200 => Loss 3.393, Train_accy 13.59
+2025-03-21 21:43:18,573 [fetril.py] => Task 0, Epoch 5/200 => Loss 3.278, Train_accy 15.99
+2025-03-21 21:43:26,110 [fetril.py] => Task 0, Epoch 6/200 => Loss 3.145, Train_accy 18.82, Test_accy 22.20
+2025-03-21 21:43:33,205 [fetril.py] => Task 0, Epoch 7/200 => Loss 3.014, Train_accy 21.86
+2025-03-21 21:43:40,273 [fetril.py] => Task 0, Epoch 8/200 => Loss 2.911, Train_accy 24.00
+2025-03-21 21:43:48,534 [fetril.py] => Task 0, Epoch 9/200 => Loss 2.792, Train_accy 27.31
+2025-03-21 21:43:58,044 [fetril.py] => Task 0, Epoch 10/200 => Loss 2.688, Train_accy 29.05
+2025-03-21 21:44:08,219 [fetril.py] => Task 0, Epoch 11/200 => Loss 2.597, Train_accy 31.17, Test_accy 38.36
+2025-03-21 21:44:17,463 [fetril.py] => Task 0, Epoch 12/200 => Loss 2.518, Train_accy 33.26
+2025-03-21 21:44:26,841 [fetril.py] => Task 0, Epoch 13/200 => Loss 2.459, Train_accy 34.98
+2025-03-21 21:44:36,130 [fetril.py] => Task 0, Epoch 14/200 => Loss 2.386, Train_accy 37.02
+2025-03-21 21:44:45,610 [fetril.py] => Task 0, Epoch 15/200 => Loss 2.341, Train_accy 37.91
+2025-03-21 21:44:55,508 [fetril.py] => Task 0, Epoch 16/200 => Loss 2.308, Train_accy 38.66, Test_accy 47.96
+2025-03-21 21:45:05,101 [fetril.py] => Task 0, Epoch 17/200 => Loss 2.249, Train_accy 40.31
+2025-03-21 21:45:14,527 [fetril.py] => Task 0, Epoch 18/200 => Loss 2.230, Train_accy 41.03
+2025-03-21 21:45:23,856 [fetril.py] => Task 0, Epoch 19/200 => Loss 2.203, Train_accy 41.50
+2025-03-21 21:45:33,349 [fetril.py] => Task 0, Epoch 20/200 => Loss 2.176, Train_accy 42.28
+2025-03-21 21:45:43,233 [fetril.py] => Task 0, Epoch 21/200 => Loss 2.149, Train_accy 42.83, Test_accy 49.90
+2025-03-21 21:45:52,598 [fetril.py] => Task 0, Epoch 22/200 => Loss 2.113, Train_accy 43.99
+2025-03-21 21:46:00,440 [fetril.py] => Task 0, Epoch 23/200 => Loss 2.107, Train_accy 44.14
+2025-03-21 21:46:10,231 [fetril.py] => Task 0, Epoch 24/200 => Loss 2.089, Train_accy 44.48
+2025-03-21 21:46:19,727 [fetril.py] => Task 0, Epoch 25/200 => Loss 2.076, Train_accy 44.87
+2025-03-21 21:46:29,651 [fetril.py] => Task 0, Epoch 26/200 => Loss 2.053, Train_accy 45.38, Test_accy 50.82
+2025-03-21 21:46:39,141 [fetril.py] => Task 0, Epoch 27/200 => Loss 2.034, Train_accy 45.80
+2025-03-21 21:46:48,521 [fetril.py] => Task 0, Epoch 28/200 => Loss 2.031, Train_accy 45.84
+2025-03-21 21:46:58,015 [fetril.py] => Task 0, Epoch 29/200 => Loss 2.004, Train_accy 46.32
+2025-03-21 21:47:07,435 [fetril.py] => Task 0, Epoch 30/200 => Loss 2.004, Train_accy 46.54
+2025-03-21 21:47:17,523 [fetril.py] => Task 0, Epoch 31/200 => Loss 1.994, Train_accy 46.64, Test_accy 50.48
+2025-03-21 21:47:26,982 [fetril.py] => Task 0, Epoch 32/200 => Loss 1.992, Train_accy 46.90
+2025-03-21 21:47:37,785 [fetril.py] => Task 0, Epoch 33/200 => Loss 1.972, Train_accy 47.83
+2025-03-21 21:47:47,442 [fetril.py] => Task 0, Epoch 34/200 => Loss 1.983, Train_accy 47.11
+2025-03-21 21:47:57,022 [fetril.py] => Task 0, Epoch 35/200 => Loss 1.957, Train_accy 47.55
+2025-03-21 21:48:07,159 [fetril.py] => Task 0, Epoch 36/200 => Loss 1.963, Train_accy 47.43, Test_accy 56.80
+2025-03-21 21:48:16,534 [fetril.py] => Task 0, Epoch 37/200 => Loss 1.943, Train_accy 48.16
+2025-03-21 21:48:26,076 [fetril.py] => Task 0, Epoch 38/200 => Loss 1.949, Train_accy 48.16
+2025-03-21 21:48:35,591 [fetril.py] => Task 0, Epoch 39/200 => Loss 1.930, Train_accy 48.77
+2025-03-21 21:48:44,954 [fetril.py] => Task 0, Epoch 40/200 => Loss 1.923, Train_accy 48.91
+2025-03-21 21:48:55,154 [fetril.py] => Task 0, Epoch 41/200 => Loss 1.913, Train_accy 48.93, Test_accy 56.40
+2025-03-21 21:49:04,707 [fetril.py] => Task 0, Epoch 42/200 => Loss 1.891, Train_accy 49.44
+2025-03-21 21:49:14,253 [fetril.py] => Task 0, Epoch 43/200 => Loss 1.893, Train_accy 49.29
+2025-03-21 21:49:23,540 [fetril.py] => Task 0, Epoch 44/200 => Loss 1.887, Train_accy 49.68
+2025-03-21 21:49:33,102 [fetril.py] => Task 0, Epoch 45/200 => Loss 1.892, Train_accy 49.63
+2025-03-21 21:49:43,480 [fetril.py] => Task 0, Epoch 46/200 => Loss 1.886, Train_accy 49.72, Test_accy 54.34
+2025-03-21 21:49:52,485 [fetril.py] => Task 0, Epoch 47/200 => Loss 1.870, Train_accy 50.32
+2025-03-21 21:50:02,029 [fetril.py] => Task 0, Epoch 48/200 => Loss 1.861, Train_accy 50.51
+2025-03-21 21:50:09,176 [fetril.py] => Task 0, Epoch 49/200 => Loss 1.862, Train_accy 50.60
+2025-03-21 21:50:18,765 [fetril.py] => Task 0, Epoch 50/200 => Loss 1.841, Train_accy 50.74
+2025-03-21 21:50:28,915 [fetril.py] => Task 0, Epoch 51/200 => Loss 1.849, Train_accy 50.54, Test_accy 57.58
+2025-03-21 21:50:38,320 [fetril.py] => Task 0, Epoch 52/200 => Loss 1.844, Train_accy 50.52
+2025-03-21 21:50:47,842 [fetril.py] => Task 0, Epoch 53/200 => Loss 1.853, Train_accy 50.54
+2025-03-21 21:50:57,340 [fetril.py] => Task 0, Epoch 54/200 => Loss 1.827, Train_accy 51.14
+2025-03-21 21:51:06,759 [fetril.py] => Task 0, Epoch 55/200 => Loss 1.830, Train_accy 50.91
+2025-03-21 21:51:16,623 [fetril.py] => Task 0, Epoch 56/200 => Loss 1.831, Train_accy 50.78, Test_accy 54.42
+2025-03-21 21:51:26,081 [fetril.py] => Task 0, Epoch 57/200 => Loss 1.807, Train_accy 51.69
+2025-03-21 21:51:35,471 [fetril.py] => Task 0, Epoch 58/200 => Loss 1.820, Train_accy 51.22
+2025-03-21 21:51:44,928 [fetril.py] => Task 0, Epoch 59/200 => Loss 1.812, Train_accy 51.54
+2025-03-21 21:51:54,346 [fetril.py] => Task 0, Epoch 60/200 => Loss 1.809, Train_accy 51.41
+2025-03-21 21:52:04,227 [fetril.py] => Task 0, Epoch 61/200 => Loss 1.779, Train_accy 52.55, Test_accy 46.38
+2025-03-21 21:52:13,811 [fetril.py] => Task 0, Epoch 62/200 => Loss 1.787, Train_accy 52.34
+2025-03-21 21:52:23,118 [fetril.py] => Task 0, Epoch 63/200 => Loss 1.791, Train_accy 51.93
+2025-03-21 21:52:32,756 [fetril.py] => Task 0, Epoch 64/200 => Loss 1.787, Train_accy 52.26
+2025-03-21 21:52:42,109 [fetril.py] => Task 0, Epoch 65/200 => Loss 1.767, Train_accy 52.65
+2025-03-21 21:52:52,226 [fetril.py] => Task 0, Epoch 66/200 => Loss 1.782, Train_accy 52.23, Test_accy 58.88
+2025-03-21 21:53:01,714 [fetril.py] => Task 0, Epoch 67/200 => Loss 1.751, Train_accy 53.06
+2025-03-21 21:53:11,033 [fetril.py] => Task 0, Epoch 68/200 => Loss 1.746, Train_accy 53.11
+2025-03-21 21:53:20,576 [fetril.py] => Task 0, Epoch 69/200 => Loss 1.764, Train_accy 53.02
+2025-03-21 21:53:29,846 [fetril.py] => Task 0, Epoch 70/200 => Loss 1.745, Train_accy 53.33
+2025-03-21 21:53:39,845 [fetril.py] => Task 0, Epoch 71/200 => Loss 1.746, Train_accy 53.17, Test_accy 61.96
+2025-03-21 21:53:49,386 [fetril.py] => Task 0, Epoch 72/200 => Loss 1.741, Train_accy 53.29
+2025-03-21 21:53:58,711 [fetril.py] => Task 0, Epoch 73/200 => Loss 1.750, Train_accy 53.12
+2025-03-21 21:54:08,076 [fetril.py] => Task 0, Epoch 74/200 => Loss 1.742, Train_accy 53.43
+2025-03-21 21:54:17,638 [fetril.py] => Task 0, Epoch 75/200 => Loss 1.713, Train_accy 54.29
+2025-03-21 21:54:24,836 [fetril.py] => Task 0, Epoch 76/200 => Loss 1.728, Train_accy 53.47, Test_accy 62.52
+2025-03-21 21:54:32,596 [fetril.py] => Task 0, Epoch 77/200 => Loss 1.727, Train_accy 53.68
+2025-03-21 21:54:42,045 [fetril.py] => Task 0, Epoch 78/200 => Loss 1.695, Train_accy 54.58
+2025-03-21 21:54:51,377 [fetril.py] => Task 0, Epoch 79/200 => Loss 1.700, Train_accy 54.36
+2025-03-21 21:55:00,916 [fetril.py] => Task 0, Epoch 80/200 => Loss 1.698, Train_accy 54.60
+2025-03-21 21:55:11,026 [fetril.py] => Task 0, Epoch 81/200 => Loss 1.699, Train_accy 54.65, Test_accy 60.32
+2025-03-21 21:55:20,360 [fetril.py] => Task 0, Epoch 82/200 => Loss 1.681, Train_accy 54.80
+2025-03-21 21:55:29,654 [fetril.py] => Task 0, Epoch 83/200 => Loss 1.691, Train_accy 55.19
+2025-03-21 21:55:38,967 [fetril.py] => Task 0, Epoch 84/200 => Loss 1.674, Train_accy 55.20
+2025-03-21 21:55:48,492 [fetril.py] => Task 0, Epoch 85/200 => Loss 1.676, Train_accy 55.08
+2025-03-21 21:55:58,314 [fetril.py] => Task 0, Epoch 86/200 => Loss 1.675, Train_accy 55.18, Test_accy 59.78
+2025-03-21 21:56:07,790 [fetril.py] => Task 0, Epoch 87/200 => Loss 1.665, Train_accy 55.56
+2025-03-21 21:56:17,305 [fetril.py] => Task 0, Epoch 88/200 => Loss 1.662, Train_accy 55.62
+2025-03-21 21:56:26,684 [fetril.py] => Task 0, Epoch 89/200 => Loss 1.651, Train_accy 55.93
+2025-03-21 21:56:36,141 [fetril.py] => Task 0, Epoch 90/200 => Loss 1.648, Train_accy 55.85
+2025-03-21 21:56:46,055 [fetril.py] => Task 0, Epoch 91/200 => Loss 1.640, Train_accy 56.25, Test_accy 57.76
+2025-03-21 21:56:55,598 [fetril.py] => Task 0, Epoch 92/200 => Loss 1.621, Train_accy 56.37
+2025-03-21 21:57:05,075 [fetril.py] => Task 0, Epoch 93/200 => Loss 1.619, Train_accy 56.38
+2025-03-21 21:57:14,656 [fetril.py] => Task 0, Epoch 94/200 => Loss 1.624, Train_accy 56.25
+2025-03-21 21:57:24,027 [fetril.py] => Task 0, Epoch 95/200 => Loss 1.611, Train_accy 56.38
+2025-03-21 21:57:34,062 [fetril.py] => Task 0, Epoch 96/200 => Loss 1.620, Train_accy 56.46, Test_accy 62.72
+2025-03-21 21:57:43,606 [fetril.py] => Task 0, Epoch 97/200 => Loss 1.597, Train_accy 57.18
+2025-03-21 21:57:52,883 [fetril.py] => Task 0, Epoch 98/200 => Loss 1.597, Train_accy 57.45
+2025-03-21 21:58:02,505 [fetril.py] => Task 0, Epoch 99/200 => Loss 1.583, Train_accy 57.32
+2025-03-21 21:58:11,862 [fetril.py] => Task 0, Epoch 100/200 => Loss 1.590, Train_accy 57.40
+2025-03-21 21:58:21,933 [fetril.py] => Task 0, Epoch 101/200 => Loss 1.591, Train_accy 57.21, Test_accy 64.26
+2025-03-21 21:58:29,745 [fetril.py] => Task 0, Epoch 102/200 => Loss 1.577, Train_accy 57.44
+2025-03-21 21:58:35,667 [fetril.py] => Task 0, Epoch 103/200 => Loss 1.575, Train_accy 57.59
+2025-03-21 21:58:42,995 [fetril.py] => Task 0, Epoch 104/200 => Loss 1.561, Train_accy 58.08
+2025-03-21 21:58:50,226 [fetril.py] => Task 0, Epoch 105/200 => Loss 1.545, Train_accy 58.41
+2025-03-21 21:58:58,048 [fetril.py] => Task 0, Epoch 106/200 => Loss 1.541, Train_accy 58.31, Test_accy 58.74
+2025-03-21 21:59:05,239 [fetril.py] => Task 0, Epoch 107/200 => Loss 1.538, Train_accy 58.55
+2025-03-21 21:59:12,399 [fetril.py] => Task 0, Epoch 108/200 => Loss 1.535, Train_accy 58.98
+2025-03-21 21:59:19,658 [fetril.py] => Task 0, Epoch 109/200 => Loss 1.544, Train_accy 58.20
+2025-03-21 21:59:26,918 [fetril.py] => Task 0, Epoch 110/200 => Loss 1.536, Train_accy 58.61
+2025-03-21 21:59:34,879 [fetril.py] => Task 0, Epoch 111/200 => Loss 1.530, Train_accy 58.60, Test_accy 66.62
+2025-03-21 21:59:42,202 [fetril.py] => Task 0, Epoch 112/200 => Loss 1.509, Train_accy 59.12
+2025-03-21 21:59:49,544 [fetril.py] => Task 0, Epoch 113/200 => Loss 1.500, Train_accy 59.49
+2025-03-21 21:59:56,875 [fetril.py] => Task 0, Epoch 114/200 => Loss 1.489, Train_accy 60.04
+2025-03-21 22:00:04,130 [fetril.py] => Task 0, Epoch 115/200 => Loss 1.497, Train_accy 59.75
+2025-03-21 22:00:11,843 [fetril.py] => Task 0, Epoch 116/200 => Loss 1.477, Train_accy 59.63, Test_accy 67.14
+2025-03-21 22:00:19,208 [fetril.py] => Task 0, Epoch 117/200 => Loss 1.466, Train_accy 60.08
+2025-03-21 22:00:26,511 [fetril.py] => Task 0, Epoch 118/200 => Loss 1.453, Train_accy 60.58
+2025-03-21 22:00:33,728 [fetril.py] => Task 0, Epoch 119/200 => Loss 1.455, Train_accy 61.00
+2025-03-21 22:00:40,924 [fetril.py] => Task 0, Epoch 120/200 => Loss 1.443, Train_accy 61.17
+2025-03-21 22:00:48,686 [fetril.py] => Task 0, Epoch 121/200 => Loss 1.449, Train_accy 61.00, Test_accy 68.26
+2025-03-21 22:00:55,817 [fetril.py] => Task 0, Epoch 122/200 => Loss 1.448, Train_accy 60.69
+2025-03-21 22:01:03,059 [fetril.py] => Task 0, Epoch 123/200 => Loss 1.414, Train_accy 61.66
+2025-03-21 22:01:10,206 [fetril.py] => Task 0, Epoch 124/200 => Loss 1.431, Train_accy 61.38
+2025-03-21 22:01:17,491 [fetril.py] => Task 0, Epoch 125/200 => Loss 1.421, Train_accy 61.54
+2025-03-21 22:01:25,363 [fetril.py] => Task 0, Epoch 126/200 => Loss 1.413, Train_accy 62.11, Test_accy 68.64
+2025-03-21 22:01:32,693 [fetril.py] => Task 0, Epoch 127/200 => Loss 1.391, Train_accy 62.00
+2025-03-21 22:01:39,866 [fetril.py] => Task 0, Epoch 128/200 => Loss 1.384, Train_accy 62.29
+2025-03-21 22:01:47,099 [fetril.py] => Task 0, Epoch 129/200 => Loss 1.393, Train_accy 62.32
+2025-03-21 22:01:53,696 [fetril.py] => Task 0, Epoch 130/200 => Loss 1.389, Train_accy 62.48
+2025-03-21 22:02:01,662 [fetril.py] => Task 0, Epoch 131/200 => Loss 1.375, Train_accy 62.64, Test_accy 71.78
+2025-03-21 22:02:08,888 [fetril.py] => Task 0, Epoch 132/200 => Loss 1.359, Train_accy 63.10
+2025-03-21 22:02:16,187 [fetril.py] => Task 0, Epoch 133/200 => Loss 1.345, Train_accy 63.91
+2025-03-21 22:02:23,474 [fetril.py] => Task 0, Epoch 134/200 => Loss 1.356, Train_accy 63.09
+2025-03-21 22:02:30,775 [fetril.py] => Task 0, Epoch 135/200 => Loss 1.334, Train_accy 63.79
+2025-03-21 22:02:38,631 [fetril.py] => Task 0, Epoch 136/200 => Loss 1.352, Train_accy 63.16, Test_accy 70.00
+2025-03-21 22:02:45,733 [fetril.py] => Task 0, Epoch 137/200 => Loss 1.327, Train_accy 63.91
+2025-03-21 22:02:53,041 [fetril.py] => Task 0, Epoch 138/200 => Loss 1.321, Train_accy 64.07
+2025-03-21 22:03:00,246 [fetril.py] => Task 0, Epoch 139/200 => Loss 1.306, Train_accy 64.66
+2025-03-21 22:03:07,473 [fetril.py] => Task 0, Epoch 140/200 => Loss 1.290, Train_accy 65.01
+2025-03-21 22:03:15,327 [fetril.py] => Task 0, Epoch 141/200 => Loss 1.271, Train_accy 65.14, Test_accy 70.34
+2025-03-21 22:03:22,727 [fetril.py] => Task 0, Epoch 142/200 => Loss 1.276, Train_accy 65.54
+2025-03-21 22:03:30,067 [fetril.py] => Task 0, Epoch 143/200 => Loss 1.269, Train_accy 65.42
+2025-03-21 22:03:37,312 [fetril.py] => Task 0, Epoch 144/200 => Loss 1.263, Train_accy 65.52
+2025-03-21 22:03:44,661 [fetril.py] => Task 0, Epoch 145/200 => Loss 1.253, Train_accy 66.01
+2025-03-21 22:03:52,557 [fetril.py] => Task 0, Epoch 146/200 => Loss 1.249, Train_accy 66.12, Test_accy 70.88
+2025-03-21 22:03:59,774 [fetril.py] => Task 0, Epoch 147/200 => Loss 1.217, Train_accy 67.03
+2025-03-21 22:04:07,082 [fetril.py] => Task 0, Epoch 148/200 => Loss 1.235, Train_accy 66.48
+2025-03-21 22:04:14,349 [fetril.py] => Task 0, Epoch 149/200 => Loss 1.215, Train_accy 67.21
+2025-03-21 22:04:21,627 [fetril.py] => Task 0, Epoch 150/200 => Loss 1.225, Train_accy 66.62
+2025-03-21 22:04:29,545 [fetril.py] => Task 0, Epoch 151/200 => Loss 1.197, Train_accy 67.63, Test_accy 74.48
+2025-03-21 22:04:36,917 [fetril.py] => Task 0, Epoch 152/200 => Loss 1.182, Train_accy 67.73
+2025-03-21 22:04:44,114 [fetril.py] => Task 0, Epoch 153/200 => Loss 1.171, Train_accy 68.28
+2025-03-21 22:04:51,548 [fetril.py] => Task 0, Epoch 154/200 => Loss 1.161, Train_accy 68.82
+2025-03-21 22:04:58,663 [fetril.py] => Task 0, Epoch 155/200 => Loss 1.154, Train_accy 68.48
+2025-03-21 22:05:04,615 [fetril.py] => Task 0, Epoch 156/200 => Loss 1.160, Train_accy 68.51, Test_accy 73.70
+2025-03-21 22:05:11,987 [fetril.py] => Task 0, Epoch 157/200 => Loss 1.145, Train_accy 68.89
+2025-03-21 22:05:19,133 [fetril.py] => Task 0, Epoch 158/200 => Loss 1.132, Train_accy 69.20
+2025-03-21 22:05:26,196 [fetril.py] => Task 0, Epoch 159/200 => Loss 1.128, Train_accy 69.24
+2025-03-21 22:05:33,531 [fetril.py] => Task 0, Epoch 160/200 => Loss 1.107, Train_accy 69.78
+2025-03-21 22:05:41,338 [fetril.py] => Task 0, Epoch 161/200 => Loss 1.106, Train_accy 70.01, Test_accy 77.26
+2025-03-21 22:05:48,617 [fetril.py] => Task 0, Epoch 162/200 => Loss 1.090, Train_accy 70.46
+2025-03-21 22:05:55,964 [fetril.py] => Task 0, Epoch 163/200 => Loss 1.079, Train_accy 70.81
+2025-03-21 22:06:03,200 [fetril.py] => Task 0, Epoch 164/200 => Loss 1.069, Train_accy 70.89
+2025-03-21 22:06:10,607 [fetril.py] => Task 0, Epoch 165/200 => Loss 1.062, Train_accy 71.26
+2025-03-21 22:06:18,440 [fetril.py] => Task 0, Epoch 166/200 => Loss 1.052, Train_accy 71.04, Test_accy 77.22
+2025-03-21 22:06:25,826 [fetril.py] => Task 0, Epoch 167/200 => Loss 1.043, Train_accy 71.51
+2025-03-21 22:06:33,100 [fetril.py] => Task 0, Epoch 168/200 => Loss 1.031, Train_accy 72.31
+2025-03-21 22:06:40,370 [fetril.py] => Task 0, Epoch 169/200 => Loss 1.013, Train_accy 72.40
+2025-03-21 22:06:47,695 [fetril.py] => Task 0, Epoch 170/200 => Loss 1.006, Train_accy 72.50
+2025-03-21 22:06:55,593 [fetril.py] => Task 0, Epoch 171/200 => Loss 0.992, Train_accy 73.20, Test_accy 77.26
+2025-03-21 22:07:02,930 [fetril.py] => Task 0, Epoch 172/200 => Loss 0.980, Train_accy 73.30
+2025-03-21 22:07:10,317 [fetril.py] => Task 0, Epoch 173/200 => Loss 0.979, Train_accy 73.33
+2025-03-21 22:07:17,667 [fetril.py] => Task 0, Epoch 174/200 => Loss 0.969, Train_accy 73.66
+2025-03-21 22:07:25,010 [fetril.py] => Task 0, Epoch 175/200 => Loss 0.961, Train_accy 73.83
+2025-03-21 22:07:32,737 [fetril.py] => Task 0, Epoch 176/200 => Loss 0.948, Train_accy 74.11, Test_accy 79.28
+2025-03-21 22:07:39,861 [fetril.py] => Task 0, Epoch 177/200 => Loss 0.953, Train_accy 74.05
+2025-03-21 22:07:46,950 [fetril.py] => Task 0, Epoch 178/200 => Loss 0.952, Train_accy 74.12
+2025-03-21 22:07:54,217 [fetril.py] => Task 0, Epoch 179/200 => Loss 0.926, Train_accy 74.65
+2025-03-21 22:08:01,353 [fetril.py] => Task 0, Epoch 180/200 => Loss 0.914, Train_accy 75.06
+2025-03-21 22:08:09,116 [fetril.py] => Task 0, Epoch 181/200 => Loss 0.920, Train_accy 74.97, Test_accy 79.92
+2025-03-21 22:08:14,897 [fetril.py] => Task 0, Epoch 182/200 => Loss 0.901, Train_accy 75.49
+2025-03-21 22:08:22,326 [fetril.py] => Task 0, Epoch 183/200 => Loss 0.895, Train_accy 75.42
+2025-03-21 22:08:29,666 [fetril.py] => Task 0, Epoch 184/200 => Loss 0.896, Train_accy 75.43
+2025-03-21 22:08:37,019 [fetril.py] => Task 0, Epoch 185/200 => Loss 0.889, Train_accy 76.00
+2025-03-21 22:08:44,928 [fetril.py] => Task 0, Epoch 186/200 => Loss 0.876, Train_accy 76.22, Test_accy 80.08
+2025-03-21 22:08:52,174 [fetril.py] => Task 0, Epoch 187/200 => Loss 0.874, Train_accy 76.28
+2025-03-21 22:08:59,482 [fetril.py] => Task 0, Epoch 188/200 => Loss 0.875, Train_accy 76.34
+2025-03-21 22:09:06,736 [fetril.py] => Task 0, Epoch 189/200 => Loss 0.865, Train_accy 76.26
+2025-03-21 22:09:14,009 [fetril.py] => Task 0, Epoch 190/200 => Loss 0.866, Train_accy 76.68
+2025-03-21 22:09:21,921 [fetril.py] => Task 0, Epoch 191/200 => Loss 0.848, Train_accy 77.01, Test_accy 80.22
+2025-03-21 22:09:29,246 [fetril.py] => Task 0, Epoch 192/200 => Loss 0.843, Train_accy 77.27
+2025-03-21 22:09:36,709 [fetril.py] => Task 0, Epoch 193/200 => Loss 0.846, Train_accy 77.28
+2025-03-21 22:09:43,948 [fetril.py] => Task 0, Epoch 194/200 => Loss 0.836, Train_accy 77.46
+2025-03-21 22:09:51,248 [fetril.py] => Task 0, Epoch 195/200 => Loss 0.840, Train_accy 77.26
+2025-03-21 22:09:59,058 [fetril.py] => Task 0, Epoch 196/200 => Loss 0.844, Train_accy 77.24, Test_accy 80.32
+2025-03-21 22:10:06,373 [fetril.py] => Task 0, Epoch 197/200 => Loss 0.847, Train_accy 77.04
+2025-03-21 22:10:13,688 [fetril.py] => Task 0, Epoch 198/200 => Loss 0.842, Train_accy 77.06
+2025-03-21 22:10:20,890 [fetril.py] => Task 0, Epoch 199/200 => Loss 0.833, Train_accy 77.32
+2025-03-21 22:10:28,047 [fetril.py] => Task 0, Epoch 200/200 => Loss 0.836, Train_accy 77.29
+
+2025-03-21 22:11:01,436 [fetril.py] => svm train: acc: 94.15
+2025-03-21 22:11:01,452 [fetril.py] => svm evaluation: acc_list: [79.92]
+Evaluating the model
+Calling After Task
+2025-03-21 22:11:02,043 [trainer.py] => No NME accuracy.
+2025-03-21 22:11:02,043 [trainer.py] => CNN: {'total': 80.26, '00-09': 83.1, '10-19': 75.1, '20-29': 82.5, '30-39': 77.7, '40-49': 82.9, 'old': 0, 'new': 80.26}
+2025-03-21 22:11:02,043 [trainer.py] => CNN top1 curve: [80.26]
+2025-03-21 22:11:02,043 [trainer.py] => CNN top5 curve: [96.54]
+
+Average Accuracy (CNN): 80.26
+2025-03-21 22:11:02,044 [trainer.py] => Average Accuracy (CNN): 80.26
+2025-03-21 22:11:02,044 [trainer.py] => All params: 467404
+2025-03-21 22:11:02,044 [trainer.py] => Trainable params: 467404
+Training the model - Task 1
+Calling incremental_train
+2025-03-21 22:11:02,053 [fetril.py] => Learning on 50-60
+2025-03-21 22:11:02,053 [fetril.py] => All params: 468054
+2025-03-21 22:11:02,054 [fetril.py] => Trainable params: 3900
+network in the _train function IncrementalNet(
+  (convnet): CifarResNet(
+    (conv_1_3x3): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (stage_1): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_2): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_3): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    (fc): Linear(in_features=64, out_features=10, bias=True)
+  )
+  (fc): SimpleLinear()
+)
+2025-03-21 22:11:17,552 [fetril.py] => Task 1, Epoch 1/50 => Loss 0.570, Train_accy 84.62, Test_accy 70.17
+2025-03-21 22:11:19,195 [fetril.py] => Task 1, Epoch 2/50 => Loss 0.420, Train_accy 88.04
+2025-03-21 22:11:20,814 [fetril.py] => Task 1, Epoch 3/50 => Loss 0.393, Train_accy 88.85
+2025-03-21 22:11:22,093 [fetril.py] => Task 1, Epoch 4/50 => Loss 0.385, Train_accy 88.95
+2025-03-21 22:11:23,179 [fetril.py] => Task 1, Epoch 5/50 => Loss 0.372, Train_accy 89.51
+2025-03-21 22:11:27,727 [fetril.py] => Task 1, Epoch 6/50 => Loss 0.365, Train_accy 89.68, Test_accy 70.42
+2025-03-21 22:11:32,540 [fetril.py] => Task 1, Epoch 7/50 => Loss 0.362, Train_accy 89.83
+2025-03-21 22:11:36,883 [fetril.py] => Task 1, Epoch 8/50 => Loss 0.361, Train_accy 89.84
+2025-03-21 22:11:41,241 [fetril.py] => Task 1, Epoch 9/50 => Loss 0.355, Train_accy 90.11
+2025-03-21 22:11:45,877 [fetril.py] => Task 1, Epoch 10/50 => Loss 0.351, Train_accy 90.04
+2025-03-21 22:11:50,919 [fetril.py] => Task 1, Epoch 11/50 => Loss 0.349, Train_accy 90.19, Test_accy 70.17
+2025-03-21 22:11:55,316 [fetril.py] => Task 1, Epoch 12/50 => Loss 0.347, Train_accy 90.31
+2025-03-21 22:11:59,672 [fetril.py] => Task 1, Epoch 13/50 => Loss 0.346, Train_accy 90.41
+2025-03-21 22:12:04,037 [fetril.py] => Task 1, Epoch 14/50 => Loss 0.344, Train_accy 90.29
+2025-03-21 22:12:08,368 [fetril.py] => Task 1, Epoch 15/50 => Loss 0.341, Train_accy 90.46
+2025-03-21 22:12:13,339 [fetril.py] => Task 1, Epoch 16/50 => Loss 0.340, Train_accy 90.55, Test_accy 70.12
+2025-03-21 22:12:17,682 [fetril.py] => Task 1, Epoch 17/50 => Loss 0.338, Train_accy 90.58
+2025-03-21 22:12:22,055 [fetril.py] => Task 1, Epoch 18/50 => Loss 0.337, Train_accy 90.61
+2025-03-21 22:12:26,442 [fetril.py] => Task 1, Epoch 19/50 => Loss 0.337, Train_accy 90.62
+2025-03-21 22:12:30,697 [fetril.py] => Task 1, Epoch 20/50 => Loss 0.335, Train_accy 90.68
+2025-03-21 22:12:36,034 [fetril.py] => Task 1, Epoch 21/50 => Loss 0.334, Train_accy 90.75, Test_accy 69.75
+2025-03-21 22:12:40,664 [fetril.py] => Task 1, Epoch 22/50 => Loss 0.329, Train_accy 90.92
+2025-03-21 22:12:45,064 [fetril.py] => Task 1, Epoch 23/50 => Loss 0.332, Train_accy 90.98
+2025-03-21 22:12:49,504 [fetril.py] => Task 1, Epoch 24/50 => Loss 0.329, Train_accy 91.05
+2025-03-21 22:12:53,873 [fetril.py] => Task 1, Epoch 25/50 => Loss 0.328, Train_accy 91.05
+2025-03-21 22:12:58,790 [fetril.py] => Task 1, Epoch 26/50 => Loss 0.327, Train_accy 91.06, Test_accy 70.63
+2025-03-21 22:13:03,011 [fetril.py] => Task 1, Epoch 27/50 => Loss 0.328, Train_accy 91.02
+2025-03-21 22:13:07,413 [fetril.py] => Task 1, Epoch 28/50 => Loss 0.325, Train_accy 91.13
+2025-03-21 22:13:11,593 [fetril.py] => Task 1, Epoch 29/50 => Loss 0.324, Train_accy 91.16
+2025-03-21 22:13:16,050 [fetril.py] => Task 1, Epoch 30/50 => Loss 0.324, Train_accy 91.13
+2025-03-21 22:13:21,079 [fetril.py] => Task 1, Epoch 31/50 => Loss 0.322, Train_accy 91.34, Test_accy 70.60
+2025-03-21 22:13:25,533 [fetril.py] => Task 1, Epoch 32/50 => Loss 0.322, Train_accy 91.28
+2025-03-21 22:13:29,819 [fetril.py] => Task 1, Epoch 33/50 => Loss 0.321, Train_accy 91.32
+2025-03-21 22:13:34,202 [fetril.py] => Task 1, Epoch 34/50 => Loss 0.321, Train_accy 91.35
+2025-03-21 22:13:38,446 [fetril.py] => Task 1, Epoch 35/50 => Loss 0.320, Train_accy 91.59
+2025-03-21 22:13:43,516 [fetril.py] => Task 1, Epoch 36/50 => Loss 0.318, Train_accy 91.56, Test_accy 70.35
+2025-03-21 22:13:47,403 [fetril.py] => Task 1, Epoch 37/50 => Loss 0.317, Train_accy 91.58
+2025-03-21 22:13:52,091 [fetril.py] => Task 1, Epoch 38/50 => Loss 0.317, Train_accy 91.49
+2025-03-21 22:13:56,431 [fetril.py] => Task 1, Epoch 39/50 => Loss 0.316, Train_accy 91.52
+2025-03-21 22:14:00,806 [fetril.py] => Task 1, Epoch 40/50 => Loss 0.315, Train_accy 91.60
+2025-03-21 22:14:05,803 [fetril.py] => Task 1, Epoch 41/50 => Loss 0.314, Train_accy 91.71, Test_accy 70.30
+2025-03-21 22:14:06,893 [fetril.py] => Task 1, Epoch 42/50 => Loss 0.314, Train_accy 91.66
+2025-03-21 22:14:10,696 [fetril.py] => Task 1, Epoch 43/50 => Loss 0.314, Train_accy 91.70
+2025-03-21 22:14:15,885 [fetril.py] => Task 1, Epoch 44/50 => Loss 0.313, Train_accy 91.74
+2025-03-21 22:14:20,178 [fetril.py] => Task 1, Epoch 45/50 => Loss 0.313, Train_accy 91.76
+2025-03-21 22:14:25,192 [fetril.py] => Task 1, Epoch 46/50 => Loss 0.313, Train_accy 91.76, Test_accy 70.62
+2025-03-21 22:14:29,459 [fetril.py] => Task 1, Epoch 47/50 => Loss 0.312, Train_accy 91.81
+2025-03-21 22:14:33,871 [fetril.py] => Task 1, Epoch 48/50 => Loss 0.312, Train_accy 91.81
+2025-03-21 22:14:38,253 [fetril.py] => Task 1, Epoch 49/50 => Loss 0.312, Train_accy 91.82
+2025-03-21 22:14:42,450 [fetril.py] => Task 1, Epoch 50/50 => Loss 0.311, Train_accy 91.83
+
+2025-03-21 22:14:50,614 [fetril.py] => svm train: acc: 90.62
+2025-03-21 22:14:50,624 [fetril.py] => svm evaluation: acc_list: [79.92, 70.82]
+Evaluating the model
+Calling After Task
+2025-03-21 22:14:51,268 [trainer.py] => No NME accuracy.
+2025-03-21 22:14:51,269 [trainer.py] => CNN: {'total': 70.48, '00-09': 76.0, '10-19': 67.2, '20-29': 76.1, '30-39': 70.3, '40-49': 73.5, '50-59': 59.8, 'old': 72.62, 'new': 59.8}
+2025-03-21 22:14:51,269 [trainer.py] => CNN top1 curve: [80.26, 70.48]
+2025-03-21 22:14:51,269 [trainer.py] => CNN top5 curve: [96.54, 91.95]
+
+Average Accuracy (CNN): 75.37
+2025-03-21 22:14:51,269 [trainer.py] => Average Accuracy (CNN): 75.37
+2025-03-21 22:14:51,269 [trainer.py] => All params: 468054
+2025-03-21 22:14:51,270 [trainer.py] => Trainable params: 3900
+Training the model - Task 2
+Calling incremental_train
+2025-03-21 22:14:51,278 [fetril.py] => Learning on 60-70
+2025-03-21 22:14:51,278 [fetril.py] => All params: 468704
+2025-03-21 22:14:51,279 [fetril.py] => Trainable params: 4550
+network in the _train function IncrementalNet(
+  (convnet): CifarResNet(
+    (conv_1_3x3): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (stage_1): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_2): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_3): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    (fc): Linear(in_features=64, out_features=10, bias=True)
+  )
+  (fc): SimpleLinear()
+)
+2025-03-21 22:15:12,222 [fetril.py] => Task 2, Epoch 1/50 => Loss 0.698, Train_accy 81.53, Test_accy 66.21
+2025-03-21 22:15:17,261 [fetril.py] => Task 2, Epoch 2/50 => Loss 0.554, Train_accy 84.77
+2025-03-21 22:15:22,358 [fetril.py] => Task 2, Epoch 3/50 => Loss 0.527, Train_accy 85.55
+2025-03-21 22:15:27,458 [fetril.py] => Task 2, Epoch 4/50 => Loss 0.513, Train_accy 85.87
+2025-03-21 22:15:32,557 [fetril.py] => Task 2, Epoch 5/50 => Loss 0.504, Train_accy 86.09
+2025-03-21 22:15:38,422 [fetril.py] => Task 2, Epoch 6/50 => Loss 0.498, Train_accy 86.22, Test_accy 65.93
+2025-03-21 22:15:43,462 [fetril.py] => Task 2, Epoch 7/50 => Loss 0.493, Train_accy 86.45
+2025-03-21 22:15:48,515 [fetril.py] => Task 2, Epoch 8/50 => Loss 0.487, Train_accy 86.70
+2025-03-21 22:15:53,623 [fetril.py] => Task 2, Epoch 9/50 => Loss 0.486, Train_accy 86.74
+2025-03-21 22:15:58,751 [fetril.py] => Task 2, Epoch 10/50 => Loss 0.485, Train_accy 86.61
+2025-03-21 22:16:04,513 [fetril.py] => Task 2, Epoch 11/50 => Loss 0.481, Train_accy 86.89, Test_accy 66.21
+2025-03-21 22:16:09,590 [fetril.py] => Task 2, Epoch 12/50 => Loss 0.478, Train_accy 86.95
+2025-03-21 22:16:14,672 [fetril.py] => Task 2, Epoch 13/50 => Loss 0.475, Train_accy 86.97
+2025-03-21 22:16:19,749 [fetril.py] => Task 2, Epoch 14/50 => Loss 0.472, Train_accy 87.20
+2025-03-21 22:16:24,975 [fetril.py] => Task 2, Epoch 15/50 => Loss 0.472, Train_accy 87.09
+2025-03-21 22:16:30,760 [fetril.py] => Task 2, Epoch 16/50 => Loss 0.471, Train_accy 87.16, Test_accy 66.11
+2025-03-21 22:16:35,787 [fetril.py] => Task 2, Epoch 17/50 => Loss 0.471, Train_accy 87.24
+2025-03-21 22:16:40,735 [fetril.py] => Task 2, Epoch 18/50 => Loss 0.467, Train_accy 87.38
+2025-03-21 22:16:45,702 [fetril.py] => Task 2, Epoch 19/50 => Loss 0.467, Train_accy 87.31
+2025-03-21 22:16:48,849 [fetril.py] => Task 2, Epoch 20/50 => Loss 0.466, Train_accy 87.40
+2025-03-21 22:16:50,879 [fetril.py] => Task 2, Epoch 21/50 => Loss 0.461, Train_accy 87.46, Test_accy 66.11
+2025-03-21 22:16:55,870 [fetril.py] => Task 2, Epoch 22/50 => Loss 0.463, Train_accy 87.52
+2025-03-21 22:17:01,442 [fetril.py] => Task 2, Epoch 23/50 => Loss 0.460, Train_accy 87.66
+2025-03-21 22:17:06,338 [fetril.py] => Task 2, Epoch 24/50 => Loss 0.458, Train_accy 87.81
+2025-03-21 22:17:11,738 [fetril.py] => Task 2, Epoch 25/50 => Loss 0.459, Train_accy 87.54
+2025-03-21 22:17:17,533 [fetril.py] => Task 2, Epoch 26/50 => Loss 0.458, Train_accy 87.65, Test_accy 66.17
+2025-03-21 22:17:22,662 [fetril.py] => Task 2, Epoch 27/50 => Loss 0.455, Train_accy 87.83
+2025-03-21 22:17:27,756 [fetril.py] => Task 2, Epoch 28/50 => Loss 0.454, Train_accy 87.73
+2025-03-21 22:17:32,897 [fetril.py] => Task 2, Epoch 29/50 => Loss 0.453, Train_accy 87.87
+2025-03-21 22:17:37,961 [fetril.py] => Task 2, Epoch 30/50 => Loss 0.450, Train_accy 88.18
+2025-03-21 22:17:43,754 [fetril.py] => Task 2, Epoch 31/50 => Loss 0.450, Train_accy 88.07, Test_accy 66.30
+2025-03-21 22:17:48,795 [fetril.py] => Task 2, Epoch 32/50 => Loss 0.450, Train_accy 88.01
+2025-03-21 22:17:53,881 [fetril.py] => Task 2, Epoch 33/50 => Loss 0.448, Train_accy 88.19
+2025-03-21 22:17:58,891 [fetril.py] => Task 2, Epoch 34/50 => Loss 0.447, Train_accy 88.10
+2025-03-21 22:18:03,965 [fetril.py] => Task 2, Epoch 35/50 => Loss 0.446, Train_accy 88.25
+2025-03-21 22:18:09,779 [fetril.py] => Task 2, Epoch 36/50 => Loss 0.445, Train_accy 88.28, Test_accy 66.40
+2025-03-21 22:18:14,793 [fetril.py] => Task 2, Epoch 37/50 => Loss 0.445, Train_accy 88.19
+2025-03-21 22:18:19,876 [fetril.py] => Task 2, Epoch 38/50 => Loss 0.442, Train_accy 88.45
+2025-03-21 22:18:24,954 [fetril.py] => Task 2, Epoch 39/50 => Loss 0.442, Train_accy 88.42
+2025-03-21 22:18:30,205 [fetril.py] => Task 2, Epoch 40/50 => Loss 0.441, Train_accy 88.50
+2025-03-21 22:18:36,020 [fetril.py] => Task 2, Epoch 41/50 => Loss 0.440, Train_accy 88.49, Test_accy 66.27
+2025-03-21 22:18:41,111 [fetril.py] => Task 2, Epoch 42/50 => Loss 0.440, Train_accy 88.60
+2025-03-21 22:18:46,367 [fetril.py] => Task 2, Epoch 43/50 => Loss 0.439, Train_accy 88.62
+2025-03-21 22:18:51,533 [fetril.py] => Task 2, Epoch 44/50 => Loss 0.438, Train_accy 88.61
+2025-03-21 22:18:56,630 [fetril.py] => Task 2, Epoch 45/50 => Loss 0.438, Train_accy 88.55
+2025-03-21 22:19:02,467 [fetril.py] => Task 2, Epoch 46/50 => Loss 0.437, Train_accy 88.67, Test_accy 66.61
+2025-03-21 22:19:07,546 [fetril.py] => Task 2, Epoch 47/50 => Loss 0.437, Train_accy 88.71
+2025-03-21 22:19:12,641 [fetril.py] => Task 2, Epoch 48/50 => Loss 0.437, Train_accy 88.70
+2025-03-21 22:19:17,532 [fetril.py] => Task 2, Epoch 49/50 => Loss 0.436, Train_accy 88.66
+2025-03-21 22:19:22,474 [fetril.py] => Task 2, Epoch 50/50 => Loss 0.437, Train_accy 88.74
+
+2025-03-21 22:19:34,215 [fetril.py] => svm train: acc: 86.99
+2025-03-21 22:19:34,238 [fetril.py] => svm evaluation: acc_list: [79.92, 70.82, 66.23]
+Evaluating the model
+Calling After Task
+2025-03-21 22:19:34,952 [trainer.py] => No NME accuracy.
+2025-03-21 22:19:34,952 [trainer.py] => CNN: {'total': 66.61, '00-09': 74.9, '10-19': 63.9, '20-29': 75.1, '30-39': 66.7, '40-49': 70.8, '50-59': 50.4, '60-69': 64.5, 'old': 66.97, 'new': 64.5}
+2025-03-21 22:19:34,952 [trainer.py] => CNN top1 curve: [80.26, 70.48, 66.61]
+2025-03-21 22:19:34,952 [trainer.py] => CNN top5 curve: [96.54, 91.95, 89.33]
+
+Average Accuracy (CNN): 72.45
+2025-03-21 22:19:34,952 [trainer.py] => Average Accuracy (CNN): 72.45
+2025-03-21 22:19:34,953 [trainer.py] => All params: 468704
+2025-03-21 22:19:34,953 [trainer.py] => Trainable params: 4550
+Training the model - Task 3
+Calling incremental_train
+2025-03-21 22:19:34,960 [fetril.py] => Learning on 70-80
+2025-03-21 22:19:34,961 [fetril.py] => All params: 469354
+2025-03-21 22:19:34,961 [fetril.py] => Trainable params: 5200
+network in the _train function IncrementalNet(
+  (convnet): CifarResNet(
+    (conv_1_3x3): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (stage_1): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_2): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_3): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    (fc): Linear(in_features=64, out_features=10, bias=True)
+  )
+  (fc): SimpleLinear()
+)
+2025-03-21 22:19:58,330 [fetril.py] => Task 3, Epoch 1/50 => Loss 0.892, Train_accy 75.96, Test_accy 61.49
+2025-03-21 22:20:04,238 [fetril.py] => Task 3, Epoch 2/50 => Loss 0.739, Train_accy 79.16
+2025-03-21 22:20:09,973 [fetril.py] => Task 3, Epoch 3/50 => Loss 0.715, Train_accy 79.90
+2025-03-21 22:20:15,702 [fetril.py] => Task 3, Epoch 4/50 => Loss 0.697, Train_accy 80.64
+2025-03-21 22:20:21,450 [fetril.py] => Task 3, Epoch 5/50 => Loss 0.684, Train_accy 80.96
+2025-03-21 22:20:27,869 [fetril.py] => Task 3, Epoch 6/50 => Loss 0.679, Train_accy 81.08, Test_accy 61.51
+2025-03-21 22:20:33,600 [fetril.py] => Task 3, Epoch 7/50 => Loss 0.669, Train_accy 81.49
+2025-03-21 22:20:39,372 [fetril.py] => Task 3, Epoch 8/50 => Loss 0.666, Train_accy 81.63
+2025-03-21 22:20:45,116 [fetril.py] => Task 3, Epoch 9/50 => Loss 0.662, Train_accy 81.69
+2025-03-21 22:20:50,664 [fetril.py] => Task 3, Epoch 10/50 => Loss 0.661, Train_accy 81.67
+2025-03-21 22:20:57,361 [fetril.py] => Task 3, Epoch 11/50 => Loss 0.656, Train_accy 82.04, Test_accy 62.20
+2025-03-21 22:21:03,142 [fetril.py] => Task 3, Epoch 12/50 => Loss 0.654, Train_accy 81.79
+2025-03-21 22:21:09,085 [fetril.py] => Task 3, Epoch 13/50 => Loss 0.653, Train_accy 81.96
+2025-03-21 22:21:14,830 [fetril.py] => Task 3, Epoch 14/50 => Loss 0.651, Train_accy 82.01
+2025-03-21 22:21:20,578 [fetril.py] => Task 3, Epoch 15/50 => Loss 0.647, Train_accy 82.06
+2025-03-21 22:21:27,046 [fetril.py] => Task 3, Epoch 16/50 => Loss 0.648, Train_accy 82.24, Test_accy 61.99
+2025-03-21 22:21:32,866 [fetril.py] => Task 3, Epoch 17/50 => Loss 0.645, Train_accy 82.36
+2025-03-21 22:21:38,819 [fetril.py] => Task 3, Epoch 18/50 => Loss 0.642, Train_accy 82.24
+2025-03-21 22:21:44,506 [fetril.py] => Task 3, Epoch 19/50 => Loss 0.641, Train_accy 82.44
+2025-03-21 22:21:50,267 [fetril.py] => Task 3, Epoch 20/50 => Loss 0.639, Train_accy 82.35
+2025-03-21 22:21:56,814 [fetril.py] => Task 3, Epoch 21/50 => Loss 0.638, Train_accy 82.36, Test_accy 61.78
+2025-03-21 22:22:02,680 [fetril.py] => Task 3, Epoch 22/50 => Loss 0.636, Train_accy 82.43
+2025-03-21 22:22:08,453 [fetril.py] => Task 3, Epoch 23/50 => Loss 0.634, Train_accy 82.75
+2025-03-21 22:22:14,246 [fetril.py] => Task 3, Epoch 24/50 => Loss 0.631, Train_accy 82.70
+2025-03-21 22:22:15,996 [fetril.py] => Task 3, Epoch 25/50 => Loss 0.629, Train_accy 82.76
+2025-03-21 22:22:20,773 [fetril.py] => Task 3, Epoch 26/50 => Loss 0.627, Train_accy 83.00, Test_accy 62.50
+2025-03-21 22:22:26,933 [fetril.py] => Task 3, Epoch 27/50 => Loss 0.626, Train_accy 83.12
+2025-03-21 22:22:32,764 [fetril.py] => Task 3, Epoch 28/50 => Loss 0.624, Train_accy 83.14
+2025-03-21 22:22:38,560 [fetril.py] => Task 3, Epoch 29/50 => Loss 0.621, Train_accy 83.27
+2025-03-21 22:22:44,424 [fetril.py] => Task 3, Epoch 30/50 => Loss 0.622, Train_accy 83.25
+2025-03-21 22:22:50,624 [fetril.py] => Task 3, Epoch 31/50 => Loss 0.619, Train_accy 83.37, Test_accy 62.28
+2025-03-21 22:22:56,391 [fetril.py] => Task 3, Epoch 32/50 => Loss 0.618, Train_accy 83.36
+2025-03-21 22:23:02,098 [fetril.py] => Task 3, Epoch 33/50 => Loss 0.618, Train_accy 83.44
+2025-03-21 22:23:07,901 [fetril.py] => Task 3, Epoch 34/50 => Loss 0.615, Train_accy 83.68
+2025-03-21 22:23:13,694 [fetril.py] => Task 3, Epoch 35/50 => Loss 0.613, Train_accy 83.63
+2025-03-21 22:23:20,315 [fetril.py] => Task 3, Epoch 36/50 => Loss 0.613, Train_accy 83.79, Test_accy 62.34
+2025-03-21 22:23:26,065 [fetril.py] => Task 3, Epoch 37/50 => Loss 0.612, Train_accy 83.71
+2025-03-21 22:23:31,960 [fetril.py] => Task 3, Epoch 38/50 => Loss 0.611, Train_accy 83.82
+2025-03-21 22:23:37,711 [fetril.py] => Task 3, Epoch 39/50 => Loss 0.610, Train_accy 83.82
+2025-03-21 22:23:43,481 [fetril.py] => Task 3, Epoch 40/50 => Loss 0.608, Train_accy 83.96
+2025-03-21 22:23:50,063 [fetril.py] => Task 3, Epoch 41/50 => Loss 0.607, Train_accy 83.92, Test_accy 62.61
+2025-03-21 22:23:55,768 [fetril.py] => Task 3, Epoch 42/50 => Loss 0.606, Train_accy 84.02
+2025-03-21 22:24:01,506 [fetril.py] => Task 3, Epoch 43/50 => Loss 0.606, Train_accy 84.09
+2025-03-21 22:24:07,388 [fetril.py] => Task 3, Epoch 44/50 => Loss 0.605, Train_accy 84.16
+2025-03-21 22:24:13,256 [fetril.py] => Task 3, Epoch 45/50 => Loss 0.604, Train_accy 84.08
+2025-03-21 22:24:19,723 [fetril.py] => Task 3, Epoch 46/50 => Loss 0.603, Train_accy 84.17, Test_accy 62.79
+2025-03-21 22:24:25,465 [fetril.py] => Task 3, Epoch 47/50 => Loss 0.603, Train_accy 84.27
+2025-03-21 22:24:31,229 [fetril.py] => Task 3, Epoch 48/50 => Loss 0.602, Train_accy 84.27
+2025-03-21 22:24:37,075 [fetril.py] => Task 3, Epoch 49/50 => Loss 0.602, Train_accy 84.28
+2025-03-21 22:24:42,901 [fetril.py] => Task 3, Epoch 50/50 => Loss 0.602, Train_accy 84.28
+
+2025-03-21 22:24:58,985 [fetril.py] => svm train: acc: 82.28
+2025-03-21 22:24:59,005 [fetril.py] => svm evaluation: acc_list: [79.92, 70.82, 66.23, 62.36]
+Evaluating the model
+Calling After Task
+2025-03-21 22:24:59,781 [trainer.py] => No NME accuracy.
+2025-03-21 22:24:59,782 [trainer.py] => CNN: {'total': 62.6, '00-09': 73.5, '10-19': 63.2, '20-29': 74.3, '30-39': 66.7, '40-49': 69.9, '50-59': 42.6, '60-69': 56.0, '70-79': 54.6, 'old': 63.74, 'new': 54.6}
+2025-03-21 22:24:59,782 [trainer.py] => CNN top1 curve: [80.26, 70.48, 66.61, 62.6]
+2025-03-21 22:24:59,782 [trainer.py] => CNN top5 curve: [96.54, 91.95, 89.33, 87.74]
+
+Average Accuracy (CNN): 69.98750000000001
+2025-03-21 22:24:59,782 [trainer.py] => Average Accuracy (CNN): 69.98750000000001
+2025-03-21 22:24:59,783 [trainer.py] => All params: 469354
+2025-03-21 22:24:59,783 [trainer.py] => Trainable params: 5200
+Training the model - Task 4
+Calling incremental_train
+2025-03-21 22:24:59,790 [fetril.py] => Learning on 80-90
+2025-03-21 22:24:59,791 [fetril.py] => All params: 470004
+2025-03-21 22:24:59,792 [fetril.py] => Trainable params: 5850
+network in the _train function IncrementalNet(
+  (convnet): CifarResNet(
+    (conv_1_3x3): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (stage_1): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_2): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_3): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    (fc): Linear(in_features=64, out_features=10, bias=True)
+  )
+  (fc): SimpleLinear()
+)
+2025-03-21 22:25:26,094 [fetril.py] => Task 4, Epoch 1/50 => Loss 1.100, Train_accy 71.00, Test_accy 58.01
+2025-03-21 22:25:32,672 [fetril.py] => Task 4, Epoch 2/50 => Loss 0.930, Train_accy 74.54
+2025-03-21 22:25:39,058 [fetril.py] => Task 4, Epoch 3/50 => Loss 0.889, Train_accy 75.79
+2025-03-21 22:25:45,453 [fetril.py] => Task 4, Epoch 4/50 => Loss 0.872, Train_accy 76.04
+2025-03-21 22:25:51,822 [fetril.py] => Task 4, Epoch 5/50 => Loss 0.858, Train_accy 76.64
+2025-03-21 22:25:59,024 [fetril.py] => Task 4, Epoch 6/50 => Loss 0.851, Train_accy 76.92, Test_accy 57.84
+2025-03-21 22:26:05,507 [fetril.py] => Task 4, Epoch 7/50 => Loss 0.846, Train_accy 77.01
+2025-03-21 22:26:11,950 [fetril.py] => Task 4, Epoch 8/50 => Loss 0.842, Train_accy 77.04
+2025-03-21 22:26:18,357 [fetril.py] => Task 4, Epoch 9/50 => Loss 0.836, Train_accy 77.35
+2025-03-21 22:26:24,883 [fetril.py] => Task 4, Epoch 10/50 => Loss 0.833, Train_accy 77.28
+2025-03-21 22:26:32,158 [fetril.py] => Task 4, Epoch 11/50 => Loss 0.828, Train_accy 77.54, Test_accy 57.92
+2025-03-21 22:26:38,714 [fetril.py] => Task 4, Epoch 12/50 => Loss 0.825, Train_accy 77.57
+2025-03-21 22:26:44,920 [fetril.py] => Task 4, Epoch 13/50 => Loss 0.822, Train_accy 77.73
+2025-03-21 22:26:51,494 [fetril.py] => Task 4, Epoch 14/50 => Loss 0.821, Train_accy 77.82
+2025-03-21 22:26:57,933 [fetril.py] => Task 4, Epoch 15/50 => Loss 0.817, Train_accy 77.84
+2025-03-21 22:27:05,278 [fetril.py] => Task 4, Epoch 16/50 => Loss 0.815, Train_accy 77.98, Test_accy 57.99
+2025-03-21 22:27:11,673 [fetril.py] => Task 4, Epoch 17/50 => Loss 0.813, Train_accy 78.08
+2025-03-21 22:27:18,058 [fetril.py] => Task 4, Epoch 18/50 => Loss 0.810, Train_accy 78.17
+2025-03-21 22:27:24,436 [fetril.py] => Task 4, Epoch 19/50 => Loss 0.809, Train_accy 78.03
+2025-03-21 22:27:30,845 [fetril.py] => Task 4, Epoch 20/50 => Loss 0.806, Train_accy 78.24
+2025-03-21 22:27:38,095 [fetril.py] => Task 4, Epoch 21/50 => Loss 0.806, Train_accy 78.30, Test_accy 58.69
+2025-03-21 22:27:44,605 [fetril.py] => Task 4, Epoch 22/50 => Loss 0.803, Train_accy 78.38
+2025-03-21 22:27:47,762 [fetril.py] => Task 4, Epoch 23/50 => Loss 0.802, Train_accy 78.49
+2025-03-21 22:27:51,354 [fetril.py] => Task 4, Epoch 24/50 => Loss 0.799, Train_accy 78.56
+2025-03-21 22:27:58,748 [fetril.py] => Task 4, Epoch 25/50 => Loss 0.795, Train_accy 78.83
+2025-03-21 22:28:06,034 [fetril.py] => Task 4, Epoch 26/50 => Loss 0.793, Train_accy 78.94, Test_accy 58.58
+2025-03-21 22:28:12,470 [fetril.py] => Task 4, Epoch 27/50 => Loss 0.792, Train_accy 78.90
+2025-03-21 22:28:18,924 [fetril.py] => Task 4, Epoch 28/50 => Loss 0.789, Train_accy 79.00
+2025-03-21 22:28:25,266 [fetril.py] => Task 4, Epoch 29/50 => Loss 0.789, Train_accy 78.96
+2025-03-21 22:28:31,791 [fetril.py] => Task 4, Epoch 30/50 => Loss 0.786, Train_accy 79.17
+2025-03-21 22:28:38,986 [fetril.py] => Task 4, Epoch 31/50 => Loss 0.785, Train_accy 79.23, Test_accy 58.62
+2025-03-21 22:28:45,558 [fetril.py] => Task 4, Epoch 32/50 => Loss 0.784, Train_accy 79.33
+2025-03-21 22:28:51,981 [fetril.py] => Task 4, Epoch 33/50 => Loss 0.780, Train_accy 79.34
+2025-03-21 22:28:58,381 [fetril.py] => Task 4, Epoch 34/50 => Loss 0.779, Train_accy 79.34
+2025-03-21 22:29:04,746 [fetril.py] => Task 4, Epoch 35/50 => Loss 0.777, Train_accy 79.57
+2025-03-21 22:29:12,210 [fetril.py] => Task 4, Epoch 36/50 => Loss 0.776, Train_accy 79.65, Test_accy 58.81
+2025-03-21 22:29:18,660 [fetril.py] => Task 4, Epoch 37/50 => Loss 0.775, Train_accy 79.60
+2025-03-21 22:29:25,227 [fetril.py] => Task 4, Epoch 38/50 => Loss 0.773, Train_accy 79.68
+2025-03-21 22:29:31,595 [fetril.py] => Task 4, Epoch 39/50 => Loss 0.772, Train_accy 79.75
+2025-03-21 22:29:38,088 [fetril.py] => Task 4, Epoch 40/50 => Loss 0.771, Train_accy 79.86
+2025-03-21 22:29:45,175 [fetril.py] => Task 4, Epoch 41/50 => Loss 0.769, Train_accy 79.82, Test_accy 58.98
+2025-03-21 22:29:51,694 [fetril.py] => Task 4, Epoch 42/50 => Loss 0.768, Train_accy 80.09
+2025-03-21 22:29:58,169 [fetril.py] => Task 4, Epoch 43/50 => Loss 0.767, Train_accy 80.01
+2025-03-21 22:30:04,561 [fetril.py] => Task 4, Epoch 44/50 => Loss 0.766, Train_accy 80.10
+2025-03-21 22:30:10,910 [fetril.py] => Task 4, Epoch 45/50 => Loss 0.766, Train_accy 80.08
+2025-03-21 22:30:18,188 [fetril.py] => Task 4, Epoch 46/50 => Loss 0.765, Train_accy 80.15, Test_accy 59.09
+2025-03-21 22:30:24,654 [fetril.py] => Task 4, Epoch 47/50 => Loss 0.764, Train_accy 80.16
+2025-03-21 22:30:30,661 [fetril.py] => Task 4, Epoch 48/50 => Loss 0.764, Train_accy 80.17
+2025-03-21 22:30:32,216 [fetril.py] => Task 4, Epoch 49/50 => Loss 0.763, Train_accy 80.16
+2025-03-21 22:30:38,454 [fetril.py] => Task 4, Epoch 50/50 => Loss 0.763, Train_accy 80.21
+
+2025-03-21 22:31:00,477 [fetril.py] => svm train: acc: 77.96
+2025-03-21 22:31:00,491 [fetril.py] => svm evaluation: acc_list: [79.92, 70.82, 66.23, 62.36, 58.16]
+Evaluating the model
+Calling After Task
+2025-03-21 22:31:01,261 [trainer.py] => No NME accuracy.
+2025-03-21 22:31:01,261 [trainer.py] => CNN: {'total': 59.18, '00-09': 72.0, '10-19': 60.4, '20-29': 71.1, '30-39': 66.7, '40-49': 68.2, '50-59': 39.9, '60-69': 51.1, '70-79': 48.5, '80-89': 54.7, 'old': 59.74, 'new': 54.7}
+2025-03-21 22:31:01,261 [trainer.py] => CNN top1 curve: [80.26, 70.48, 66.61, 62.6, 59.18]
+2025-03-21 22:31:01,261 [trainer.py] => CNN top5 curve: [96.54, 91.95, 89.33, 87.74, 85.49]
+
+Average Accuracy (CNN): 67.82600000000001
+2025-03-21 22:31:01,262 [trainer.py] => Average Accuracy (CNN): 67.82600000000001
+2025-03-21 22:31:01,262 [trainer.py] => All params: 470004
+2025-03-21 22:31:01,262 [trainer.py] => Trainable params: 5850
+Training the model - Task 5
+Calling incremental_train
+2025-03-21 22:31:01,271 [fetril.py] => Learning on 90-100
+2025-03-21 22:31:01,271 [fetril.py] => All params: 470654
+2025-03-21 22:31:01,272 [fetril.py] => Trainable params: 6500
+network in the _train function IncrementalNet(
+  (convnet): CifarResNet(
+    (conv_1_3x3): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn_1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (stage_1): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_2): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (stage_3): Sequential(
+      (0): ResNetBasicblock(
+        (conv_a): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (downsample): DownsampleA(
+          (avg): AvgPool2d(kernel_size=1, stride=2, padding=0)
+        )
+      )
+      (1): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (2): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (3): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (4): ResNetBasicblock(
+        (conv_a): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_a): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (conv_b): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn_b): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+    (fc): Linear(in_features=64, out_features=10, bias=True)
+  )
+  (fc): SimpleLinear()
+)
+2025-03-21 22:31:30,055 [fetril.py] => Task 5, Epoch 1/50 => Loss 1.161, Train_accy 69.35, Test_accy 55.43
+2025-03-21 22:31:37,214 [fetril.py] => Task 5, Epoch 2/50 => Loss 0.995, Train_accy 72.93
+2025-03-21 22:31:44,473 [fetril.py] => Task 5, Epoch 3/50 => Loss 0.951, Train_accy 74.42
+2025-03-21 22:31:51,731 [fetril.py] => Task 5, Epoch 4/50 => Loss 0.931, Train_accy 75.01
+2025-03-21 22:31:58,855 [fetril.py] => Task 5, Epoch 5/50 => Loss 0.920, Train_accy 75.18
+2025-03-21 22:32:06,803 [fetril.py] => Task 5, Epoch 6/50 => Loss 0.908, Train_accy 75.60, Test_accy 55.38
+2025-03-21 22:32:13,949 [fetril.py] => Task 5, Epoch 7/50 => Loss 0.905, Train_accy 75.64
+2025-03-21 22:32:20,991 [fetril.py] => Task 5, Epoch 8/50 => Loss 0.901, Train_accy 75.83
+2025-03-21 22:32:28,148 [fetril.py] => Task 5, Epoch 9/50 => Loss 0.893, Train_accy 76.02
+2025-03-21 22:32:35,286 [fetril.py] => Task 5, Epoch 10/50 => Loss 0.890, Train_accy 76.10
+2025-03-21 22:32:43,242 [fetril.py] => Task 5, Epoch 11/50 => Loss 0.889, Train_accy 76.10, Test_accy 55.76
+2025-03-21 22:32:50,363 [fetril.py] => Task 5, Epoch 12/50 => Loss 0.884, Train_accy 76.37
+2025-03-21 22:32:57,477 [fetril.py] => Task 5, Epoch 13/50 => Loss 0.883, Train_accy 76.48
+2025-03-21 22:33:04,473 [fetril.py] => Task 5, Epoch 14/50 => Loss 0.879, Train_accy 76.54
+2025-03-21 22:33:11,733 [fetril.py] => Task 5, Epoch 15/50 => Loss 0.878, Train_accy 76.54
+2025-03-21 22:33:15,158 [fetril.py] => Task 5, Epoch 16/50 => Loss 0.873, Train_accy 76.75, Test_accy 55.53
+2025-03-21 22:33:23,009 [fetril.py] => Task 5, Epoch 17/50 => Loss 0.871, Train_accy 76.85
+2025-03-21 22:33:30,075 [fetril.py] => Task 5, Epoch 18/50 => Loss 0.868, Train_accy 76.88
+2025-03-21 22:33:37,334 [fetril.py] => Task 5, Epoch 19/50 => Loss 0.866, Train_accy 77.08
+2025-03-21 22:33:44,441 [fetril.py] => Task 5, Epoch 20/50 => Loss 0.865, Train_accy 77.13
+2025-03-21 22:33:52,576 [fetril.py] => Task 5, Epoch 21/50 => Loss 0.864, Train_accy 77.17, Test_accy 55.56
+2025-03-21 22:33:59,582 [fetril.py] => Task 5, Epoch 22/50 => Loss 0.861, Train_accy 77.27
+2025-03-21 22:34:06,609 [fetril.py] => Task 5, Epoch 23/50 => Loss 0.857, Train_accy 77.34
+2025-03-21 22:34:13,854 [fetril.py] => Task 5, Epoch 24/50 => Loss 0.856, Train_accy 77.45
+2025-03-21 22:34:20,979 [fetril.py] => Task 5, Epoch 25/50 => Loss 0.853, Train_accy 77.59
+2025-03-21 22:34:28,945 [fetril.py] => Task 5, Epoch 26/50 => Loss 0.851, Train_accy 77.76, Test_accy 55.92
+2025-03-21 22:34:36,191 [fetril.py] => Task 5, Epoch 27/50 => Loss 0.851, Train_accy 77.66
+2025-03-21 22:34:43,518 [fetril.py] => Task 5, Epoch 28/50 => Loss 0.847, Train_accy 77.94
+2025-03-21 22:34:50,540 [fetril.py] => Task 5, Epoch 29/50 => Loss 0.847, Train_accy 77.83
+2025-03-21 22:34:57,860 [fetril.py] => Task 5, Epoch 30/50 => Loss 0.844, Train_accy 78.10
+2025-03-21 22:35:05,849 [fetril.py] => Task 5, Epoch 31/50 => Loss 0.841, Train_accy 78.12, Test_accy 55.98
+2025-03-21 22:35:12,388 [fetril.py] => Task 5, Epoch 32/50 => Loss 0.840, Train_accy 78.26
+2025-03-21 22:35:18,243 [fetril.py] => Task 5, Epoch 33/50 => Loss 0.837, Train_accy 78.25
+2025-03-21 22:35:24,129 [fetril.py] => Task 5, Epoch 34/50 => Loss 0.837, Train_accy 78.26
+2025-03-21 22:35:29,955 [fetril.py] => Task 5, Epoch 35/50 => Loss 0.834, Train_accy 78.44
+2025-03-21 22:35:36,791 [fetril.py] => Task 5, Epoch 36/50 => Loss 0.833, Train_accy 78.58, Test_accy 56.01
+2025-03-21 22:35:42,619 [fetril.py] => Task 5, Epoch 37/50 => Loss 0.831, Train_accy 78.70
+2025-03-21 22:35:48,408 [fetril.py] => Task 5, Epoch 38/50 => Loss 0.829, Train_accy 78.87
+2025-03-21 22:35:51,987 [fetril.py] => Task 5, Epoch 39/50 => Loss 0.828, Train_accy 78.83
+2025-03-21 22:35:58,734 [fetril.py] => Task 5, Epoch 40/50 => Loss 0.827, Train_accy 78.82
+2025-03-21 22:36:05,171 [fetril.py] => Task 5, Epoch 41/50 => Loss 0.825, Train_accy 78.97, Test_accy 56.15
+2025-03-21 22:36:10,200 [fetril.py] => Task 5, Epoch 42/50 => Loss 0.824, Train_accy 79.01
+2025-03-21 22:36:16,821 [fetril.py] => Task 5, Epoch 43/50 => Loss 0.823, Train_accy 79.13
+2025-03-21 22:36:21,372 [fetril.py] => Task 5, Epoch 44/50 => Loss 0.822, Train_accy 79.13
+2025-03-21 22:36:27,055 [fetril.py] => Task 5, Epoch 45/50 => Loss 0.821, Train_accy 79.20
+2025-03-21 22:36:33,443 [fetril.py] => Task 5, Epoch 46/50 => Loss 0.820, Train_accy 79.16, Test_accy 56.31
+2025-03-21 22:36:39,235 [fetril.py] => Task 5, Epoch 47/50 => Loss 0.820, Train_accy 79.25
+2025-03-21 22:36:45,170 [fetril.py] => Task 5, Epoch 48/50 => Loss 0.819, Train_accy 79.30
+2025-03-21 22:36:51,267 [fetril.py] => Task 5, Epoch 49/50 => Loss 0.819, Train_accy 79.29
+2025-03-21 22:36:56,755 [fetril.py] => Task 5, Epoch 50/50 => Loss 0.818, Train_accy 79.34
+
+2025-03-21 22:37:17,373 [fetril.py] => svm train: acc: 76.92
+2025-03-21 22:37:17,381 [fetril.py] => svm evaluation: acc_list: [79.92, 70.82, 66.23, 62.36, 58.16, 55.27]
+Evaluating the model
+Calling After Task
+2025-03-21 22:37:18,082 [trainer.py] => No NME accuracy.
+2025-03-21 22:37:18,083 [trainer.py] => CNN: {'total': 56.4, '00-09': 69.9, '10-19': 59.3, '20-29': 71.0, '30-39': 64.1, '40-49': 68.0, '50-59': 36.2, '60-69': 49.2, '70-79': 42.7, '80-89': 48.8, '90-99': 54.8, 'old': 56.58, 'new': 54.8}
+2025-03-21 22:37:18,083 [trainer.py] => CNN top1 curve: [80.26, 70.48, 66.61, 62.6, 59.18, 56.4]
+2025-03-21 22:37:18,083 [trainer.py] => CNN top5 curve: [96.54, 91.95, 89.33, 87.74, 85.49, 83.79]
+
+Average Accuracy (CNN): 65.92166666666667
+2025-03-21 22:37:18,083 [trainer.py] => Average Accuracy (CNN): 65.92166666666667
